@@ -11,7 +11,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="welcome to jingying"
+            android:text="精影"
             android:gravity="center"
             android:textSize="28sp"
             android:id="@+id/title_welcome"

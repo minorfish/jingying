@@ -2,41 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:orientation="vertical"
               >
-    <LinearLayout
+    <include layout="@layout/header"/>
 
-            android:layout_below="@+id/editText"
-            android:orientation="horizontal"
+    <!-- 存放主要页面内容 -->
+   <!-- <FrameLayout
+            android:id="@+id/maincontent"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="bottom"
-            android:layout_alignParentStart="true" android:id="@+id/menu">
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    -->
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
 
-        <ImageButton
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButtonHome" android:src="@drawable/home" android:layout_alignParentBottom="true"
-                android:layout_alignEnd="@+id/editText"/>
-        <ImageButton
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:id="@+id/imageButtonMovie" android:src="@drawable/movie"/>
-
-        <ImageButton
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButtonSearch" android:src="@drawable/search"
-                android:layout_alignParentBottom="true"
-                android:layout_alignEnd="@+id/editText"/>
-        <ImageButton
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButtonUser" android:src="@drawable/user" android:layout_alignParentBottom="true"
-                android:layout_alignEnd="@+id/editText"/>
-    </LinearLayout>
+   <include layout="@layout/menu"/>
 </LinearLayout>
